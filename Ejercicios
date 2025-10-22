@@ -1,0 +1,276 @@
+/*
+        EJERCICIO 1
+        Console.Write("Introduce el tamaño del array: ");
+        int tamaño;
+        tamaño = int.Parse(Console.ReadLine());
+
+        int[] numeros = new int[tamaño];
+
+        for (int i = 0; i < tamaño; i++)
+        {
+            Console.Write($"Introduce el valor #{i + 1}: ");
+            numeros[i] = int.Parse(Console.ReadLine());
+        }
+
+        int suma = 0;
+        foreach (int numero in numeros)
+        {
+            suma += numero;
+        }
+
+        double media = (double)suma / tamaño;
+
+        Console.WriteLine($"\nLa suma del array es: {suma}");
+        Console.WriteLine($"La media del array es: {media:F2}");
+        */
+
+
+
+
+
+
+
+
+
+        /*
+        EJERCICIO 2
+
+        Console.Write("Introduce una cadena de texto: ");
+        string texto = Console.ReadLine();
+
+        int cantidadEspacios = ContarEspacios(texto);
+
+        Console.WriteLine($"\nLa cadena contiene {cantidadEspacios} espacios en blanco.");
+    }
+
+    static int ContarEspacios(string cadena)
+    {
+        int contador = 0;
+
+        foreach (char c in cadena)
+        {
+            if (c == ' ')
+            {
+                contador++;
+            }
+        }
+
+        return contador;*/
+
+
+
+
+
+
+
+        /*
+        EJERCICIO 3
+        Console.Write("Dime un número y te calculo el factorial: ");
+        int num = int.Parse(Console.ReadLine());
+
+        int resultado = 1;
+
+        for (int i = 1; i <= num; i++)
+        {
+            resultado *= i;
+        }
+
+        Console.WriteLine("El factorial de " + num + " es: " + resultado);*/
+
+        /*
+        EJERCICIO 4
+        Console.Write("Introduce un número: ");
+        int num = int.Parse(Console.ReadLine());
+
+        bool esPrimo = true;
+
+        if (num <= 1)
+        {
+            esPrimo = false;
+        }
+        else
+        {
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    esPrimo = false;
+                    break;
+                }
+            }
+        }
+
+        if (esPrimo)
+            Console.WriteLine(num + " es un número primo.");
+        else
+            Console.WriteLine(num + " no es un número primo.");*/
+
+
+
+
+
+
+
+
+        /*
+        EJERCICIO 5
+        Console.Write("Introduce la base: ");
+        int baseNum = int.Parse(Console.ReadLine());
+
+        Console.Write("Introduce el exponente: ");
+        int exponente = int.Parse(Console.ReadLine());
+
+        int resultadoIterativo = PotenciaIterativa(baseNum, exponente);
+        Console.WriteLine($"Potencia iterativa: {baseNum}^{exponente} = {resultadoIterativo}");
+
+        int resultadoRecursivo = PotenciaRecursiva(baseNum, exponente);
+        Console.WriteLine($"Potencia recursiva: {baseNum}^{exponente} = {resultadoRecursivo}");
+    }
+
+    static int PotenciaIterativa(int baseNum, int exponente)
+    {
+        int resultado = 1;
+        for (int i = 0; i < exponente; i++)
+        {
+            resultado *= baseNum;
+        }
+        return resultado;
+    }
+
+    static int PotenciaRecursiva(int baseNum, int exponente)
+    {
+        if (exponente == 0)
+            return 1; 
+        else
+            return baseNum * PotenciaRecursiva(baseNum, exponente - 1);*/
+
+
+
+
+
+/*
+        EJERCICIO 6
+        int intentos = 3;
+        bool loginExitoso = false;
+
+        while (intentos > 0 && !loginExitoso)
+        {
+            Console.Write("Introduce el usuario: ");
+            string usuario = Console.ReadLine();
+
+            Console.Write("Introduce la contraseña: ");
+            string contraseña = Console.ReadLine();
+
+            if (ValidarLogin(usuario, contraseña))
+            {
+                Console.WriteLine("¡Login exitoso!");
+                loginExitoso = true;
+            }
+            else
+            {
+                intentos--;
+                Console.WriteLine($"Usuario o contraseña incorrectos. Te quedan {intentos} intento(s).");
+            }
+        }
+
+        if (!loginExitoso)
+        {
+            Console.WriteLine("Has agotado los intentos. Acceso denegado.");
+        }
+    }
+
+    static bool ValidarLogin(string usuario, string contraseña)
+    {
+        return usuario == "usuario2DAM" && contraseña == "pass2DAM";*/
+
+
+
+
+
+
+
+        /*
+        EJERCICIO 7
+        Console.Write("Introduce el primer número: ");
+        int num1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Introduce el segundo número: ");
+        int num2 = int.Parse(Console.ReadLine());
+
+        if (EsMultiplo(num1, num2))
+            Console.WriteLine($"{num1} es múltiplo de {num2}");
+        else if (EsMultiplo(num2, num1))
+            Console.WriteLine($"{num2} es múltiplo de {num1}");
+        else
+            Console.WriteLine("Ninguno es múltiplo del otro.");
+    }
+
+    static bool EsMultiplo(int a, int b)
+    {
+        if (b == 0) return false; 
+        return a % b == 0;*/
+
+
+
+
+
+
+
+
+ /*
+        EJERCICIO 8
+        Console.Write("Introduce un número: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        int suma = SumaDigitos(numero);
+
+        Console.WriteLine($"La suma de los dígitos de {numero} es: {suma}");
+    }
+
+    static int SumaDigitos(int n)
+    {
+        int suma = 0;
+        n = Math.Abs(n); 
+
+        while (n > 0)
+        {
+            int digito = n % 10; 
+            suma += digito;
+            n /= 10; 
+        }
+
+        return suma;*/
+
+
+
+
+
+
+
+
+
+
+/*
+        EJERCICIO 9
+        int[] numeros = { 8, 4, 9, 2, 6, 10 };
+
+        int posicion = PosicionDelMenor(numeros);
+
+        Console.WriteLine("El numero menor es: " + numeros[posicion]);
+    }
+
+    static int PosicionDelMenor(int[] array)
+    {
+        int menor = array[0];
+        int posicion = 0;
+
+        for (int i = 1; i < array.Length; i++)
+        {
+            if (array[i] < menor)
+            {
+                menor = array[i];
+                posicion = i;
+            }
+        }
+
+        return posicion;*/
